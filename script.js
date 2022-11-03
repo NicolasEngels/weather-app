@@ -1,6 +1,7 @@
 const button = document.getElementById('submit')
 
 button.addEventListener('click', () => {
+    document.getElementById('place').innerHTML="";
     fetch('./city.list.json')
     .then(response => response.json())
     .then(cities => {
@@ -64,7 +65,6 @@ button.addEventListener('click', () => {
                                 newHour.appendChild(document.createTextNode(i.dt_txt.charAt(11)+i.dt_txt.charAt(12)+i.dt_txt.charAt(13)+i.dt_txt.charAt(14)+i.dt_txt.charAt(15) + " --> " + i.main.temp)); 
                                 ajd5.appendChild(newHour)
                             }
-                            // console.log(i.dt_txt.charAt(11)+i.dt_txt.charAt(12)+i.dt_txt.charAt(13)+i.dt_txt.charAt(14)+i.dt_txt.charAt(15) + " :: " + i.dt_txt.charAt(8)+i.dt_txt.charAt(9) + " / " + i.dt_txt.charAt(5)+i.dt_txt.charAt(6) + " --> " + i.main.temp);
                         }
 
                         newLocation.appendChild(ajd);
@@ -88,7 +88,3 @@ button.addEventListener('click', () => {
 })
 
 
-// jour = i.dt_txt.charAt(8)+i.dt_txt.charAt(9);
-// mois = i.dt_txt.charAt(5)+i.dt_txt.charAt(6);
-
-// heure = i.dt_txt.charAt(11)+i.dt_txt.charAt(12)+i.dt_txt.charAt(13)+i.dt_txt.charAt(14)+i.dt_txt.charAt(15);;

@@ -5,14 +5,19 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
   <title>Weather</title>
 </head>
     <body>
+        <h1>Wheater App</h1>
         <div id="search">
-            <input type="texte" id="city">
+            <input type="texte" id="city" placeholder="Enter a city">
             <button id='submit'>submit</button>
         </div>
-        <div id="place"></div>
+        <div id="place">
+            
+        </div>
+        <canvas id="myChart" style="max-width:80%;margin: auto;background-color: #38434a;opacity: 0.9; border-radius: 0 0 10px 10px;"></canvas>
 
         <script src="./script.js"></script>
     </body>
